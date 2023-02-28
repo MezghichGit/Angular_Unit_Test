@@ -32,4 +32,11 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('demoUnitTest app is running!');
   });
+
+  it(` La variable ecole doit être égle à 'Ecole-IT'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.ecole).toEqual('Ecole-IT');
+  });
+
 });
